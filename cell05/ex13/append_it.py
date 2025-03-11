@@ -6,4 +6,4 @@ else:
     for x in range(len(word)):
         if not 'ism' in word[x]:
             words.append(word[x] + 'ism')
-print(*words) 
+print(*words, sep="\n") 
