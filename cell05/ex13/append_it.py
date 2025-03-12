@@ -1,9 +1,11 @@
-word = input().split()
+word = input().split('"')
 if len(word) == 0:
     print('none')
-else:
-    words = []
-    for x in range(len(word)):
-        if not 'ism' in word[x]:
-            words.append(word[x] + 'ism')
-print(*words, sep="\n") 
+while "" in word or " " in word:
+    word.remove('')
+    word.remove(' ')
+x = 0
+while x < len(word):
+    if not 'ism' in word[x]:
+        print(word[x] + 'ism')
+    x += 1
