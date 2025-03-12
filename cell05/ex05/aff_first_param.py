@@ -1,6 +1,9 @@
-word = input().split('" "')
-word = [text.replace('"', '').replace("'", '') for text in word]
+word = input().split('"')
 if len(word) == 0:
     print('none')
-else:
-    print(word[0])
+while "" in word or " " in word:
+    word.remove('')
+    word.remove(' ')
+
+print(word[0])
+
