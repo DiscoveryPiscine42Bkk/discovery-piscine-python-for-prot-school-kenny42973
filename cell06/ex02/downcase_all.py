@@ -1,12 +1,17 @@
-a = input().split('" "')
-a = [text.replace('"', '').replace("'", '') for text in a]
+word = input().split('"')
+while '' in word:
+    word.remove('')
+while ' ' in word:
+    word.remove(' ')
+
 def downcase_all():
-    if len(a) < 1:
+    if len(word) < 1:
         print('none')
     else:
-        
-        for x in range(len(a)):
-            print(a[x].lower())
+        x = 0
+        while x < len(word):
+            print(word[x].lower())
+            x += 1
     return
 
 downcase_all()
